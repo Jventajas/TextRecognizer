@@ -74,13 +74,7 @@ class ImageClassifier:
         return thresholded_image
 
 
-
-
-
-
-
-
-class ContourWrapper:
+class _ContourWrapper:
 
     def __init__(self, contour):
 
