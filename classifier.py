@@ -52,7 +52,7 @@ class ImageClassifier:
     def _find_valid_contours(self, image):
 
         image_contours, _ = cv2.findContours(image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        contours = [ContourWrapper(contour) for contour in image_contours]
+        contours = [_ContourWrapper(contour) for contour in image_contours]
         valid_contours = [contour for contour in contours if contour.area > MIN_CONTOUR_AREA]
 
         valid_contours.sort(key=operator.attrgetter("x"))
