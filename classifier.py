@@ -73,8 +73,5 @@ class _ContourWrapper:
 
         self.contour = contour
         self.bounding_rect = cv2.boundingRect(contour)
-        self.x = self.bounding_rect.x
-        self.y = self.bounding_rect.y
-        self.width = self.bounding_rect.width
-        self.height = self.bounding_rect.height
+        self.x, self.y, self.width, self.height = self.bounding_rect
         self.area = cv2.contourArea(contour)
